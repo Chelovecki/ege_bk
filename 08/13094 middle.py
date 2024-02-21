@@ -15,7 +15,7 @@ for r in product(chet_nums, nechet_nums, chet_nums, nechet_nums, chet_nums,neche
     # [False, False, False, False, False, False, False, False, False]
     if all([r.count(x) <=3 for x in r]):
         counter += 1
-print(counter)
+print(counter*2)
 
 
 """
