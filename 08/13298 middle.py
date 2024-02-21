@@ -15,10 +15,11 @@
 from itertools import product
 
 # отсортировать, добавить счетчик (n от enumerate), добавить условие
-sequense = [(n, "".join(r)) for n, r in enumerate(product(sorted('привычка'), repeat=5), 1) if n % 5 != 0]
+sequense = ["".join(r) for n, r in enumerate(product(sorted('привычка'), repeat=5), 1) if n % 5 != 0]
 
-
-for n, r in sequense:
+counter = 0
+for r in sequense:
+    counter += 1
     if len(set(r)) == 5 and (r.count('и') + r.count('а') + r.count('ы') == 0):
-        print(n)
+        print(counter)
         break
