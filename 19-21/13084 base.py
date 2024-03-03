@@ -8,13 +8,26 @@
 """
 
 
+def funk(total_stones, step):
+    if total_stones >= 84: return step % 2 == 0
+    if step == 0: return 0
+    possible_ways = [funk(total_stones + 1, step - 1)]
+
+    if total_stones % 2 == 0: possible_ways += [funk(total_stones * 1.5, step - 1)]
+    if total_stones % 2 != 0: possible_ways += [funk(total_stones * 2, step - 1)]
+    return any(possible_ways) if step % 2 != 0 else all(possible_ways)
+
+
+print("19)", [s for s in range(1, 84) if funk(s, 2)][-1])
+
 """
 Задание 20
 Для игры, описанной в задании 19, найдите два наименьших значения S, при которых Петя не может выиграть первым ходом, но у Пети есть выигрышная стратегия, позволяющая ему выиграть вторым ходом при любой игре Вани.
 В ответе запишите найденные значения в порядке возрастания.
 """
-
+print("20)", [s for s in range(1, 84) if not funk(s, 1) and funk(s, 3)][:2])
 """
 Задание 21.
 Для игры, описанной в задании 19, найдите максимальное значение S, при котором у Вани есть стратегия, позволяющая ему выиграть первым или вторым ходом при любой игре Пети, но у Вани нет стратегии, которая позволила бы ему гарантированно выиграть первым ходом.
 """
+print("21)", [s for s in range(1, 84) if not funk(s, 2) and funk(s, 4)][-1])
