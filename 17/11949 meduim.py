@@ -14,10 +14,22 @@ max_num_ends_on_68 = max([r for r in nums if str(r).endswith('68')])
 res = []
 for idx in range(0, len(nums) - 3):
     four_nums = nums[idx:idx + 4]
-    print(four_nums)  # чтобы проверить что мы не выпадем из цикла
+    # print(four_nums)  # чтобы проверить что мы не выпадем из цикла
     counter_2_digit = [10 <= abs(num) <= 99 for num in four_nums]
     a = sum(counter_2_digit)
     if (a == 1 or a == 4) and sum(four_nums) >= max_num_ends_on_68:
         res.append(sum(four_nums))
 
 print(len(res), max(res))
+
+
+# решение by Marat🇷🇺
+
+s = [int(x) for x in open("17_11949.txt")]
+ans = []
+
+a = max([x for x in s if abs(x) % 100 == 68])
+for i in range(len(s) - 3):
+    if ((10 <= abs(s[i]) < 100) + (10 <= abs(s[i+1]) < 100) + (10 <= abs(s[i+2]) < 100) + (10 <= abs(s[i+3]) < 100)) in [1,4] and s[i]+s[i+1]+s[i+2]+s[i+3] >= a:
+        ans.append(s[i] + s[i + 1] + s[i + 2] + s[i + 3])
+print(len(ans), max(ans))
