@@ -8,9 +8,8 @@
 from itertools import permutations
 
 counter = 0
-for r in permutations('макака'):
+for r in set(permutations('макака')):
     r = "".join(r)
-
     if 'кк' not in r and 'аа' not in r:
         counter += 1
 print(counter)
