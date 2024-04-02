@@ -1,14 +1,37 @@
-import time
-from itertools import product
-# получаем рус алфавит. в него надо будет вручную дописать ё
-start_a = ord('а') # русская а
-print("".join(chr(r) for r in range(start_a, start_a+32)))
+"""
+№ 10006 (Уровень: Базовый)
 
-alph = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-a = time.time()
-for n, r in enumerate(product(alph, repeat=8), 1):
-    print(r)
-    if r[0] == "р" and r[1] == "е" and r[2] == "к" and r[3] == "у" and r[4] == "р" and r[5] == "с" and r[6] == "и" and r[7] == "я":
-        print(n)
-        print(f"выполнено за {time.time() - a} сек.")
-        break
+(С. Чайкин) Все восьмибуквенные слова, составленные из букв русского алфавита, записаны в алфавитном порядке и пронумерованы.
+
+Ниже приведено начало списка.
+1. АААААААА
+2. АААААААБ
+3. АААААААВ
+4. АААААААГ
+5. АААААААД
+
+Под каким номером стоит слово РЕКУРСИЯ?
+
+Показать ответ
+731425709058
+"""
+def cc(word, data: dict, base):
+    word = word[::-1]
+    also_res = [data[word[idx]] * len(data) ** idx for idx in range(len(word))]
+    return sum(also_res) + 1
+    # word = word[::-1]
+    # res = 0
+    # for idx in range(len(word)):
+    #     a = data[word[idx]]
+    #     b = len(data)
+    #     c = idx
+    #     r = a*b**c
+    #     res += r
+    # return res + 1
+
+
+rus_alph = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+
+data = {rus_alph[idx]: idx + 1 for idx in range(len(rus_alph))}
+
+print(cc('рекурсия', data, rus_alph))
