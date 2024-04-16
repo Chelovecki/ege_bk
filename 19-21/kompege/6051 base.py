@@ -34,7 +34,7 @@
 """
 
 
-def f_19(count1, count2, steps):
+def f(count1, count2, steps):
     if count1 + count2 >= 52: return steps % 2 == 0
     if steps == 0: return 0
     ways = [
@@ -46,7 +46,7 @@ def f_19(count1, count2, steps):
 
 
 # запомни, что если пишут "после неудачного хода", то это значит, что надо all(ways) заменить на any(ways)
-print(f"19) {[r for r in range(1, 47) if f_19(5, r, 2)]}, min = 6")
+print(f"19) {[r for r in range(1, 47) if f(5, r, 2)][0]}, min = 6")
 
 
 def f(count1, count2, steps):
@@ -60,5 +60,5 @@ def f(count1, count2, steps):
     return any(ways) if steps % 2 != 0 else all(ways)
 
 
-print(f"20) {[r for r in range(1, 47) if not (f(5, r, 1)) and f(5, r, 3)]}, первые min = 5, 6")
+print(f"20) {[r for r in range(1, 47) if not (f(5, r, 1)) and f(5, r, 3)][:2]}")
 print(f"20) {[r for r in range(1, 47) if not (f(5, r, 2)) and f(5, r, 4)]}")
