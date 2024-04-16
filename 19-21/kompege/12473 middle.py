@@ -44,3 +44,6 @@ def f(a, m):
 
 
 print("19)", [r for r in range(1, 129) if not f(r,2) and f(r,1)])
+
+
+#todo

@@ -50,6 +50,8 @@ def f(counter1, counter2, step):
     return any(ways) if step%2!=0 else all(ways)
 
 
-print(f"19) {[r for r in range(1, 217) if f(58, r, 2)]}, min = 40")
-print(f"20) {[r for r in range(1, 217) if not(f(58,r,1)) and f(58, r, 3)]}, min = 10, max = 39")
-print(f"21) {[r for r in range(1, 217) if not(f(58,r,2)) and f(58, r, 4)]}, min = 7")
+print(f"19) {[r for r in range(1, 217) if f(58, r, 2)][0]}")
+
+a = [r for r in range(1, 217) if not(f(58,r,1)) and f(58, r, 3)]
+print(f"20) {a[0]} {a[-1]}")
+print(f"21) {[r for r in range(1, 217) if not(f(58,r,2)) and f(58, r, 4)][0]}")

@@ -1,3 +1,4 @@
+# 7354
 def f(a, m):
     if a >= 31: return m % 2 == 0
     if m == 0: return 0

@@ -14,3 +14,4 @@ s = open('12931 base.txt').read()
 res = []
 for idx in range(len(s)):
 
+#todo

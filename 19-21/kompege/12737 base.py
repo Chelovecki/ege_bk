@@ -56,7 +56,9 @@ def f(summ1, summ2, steps):
     return any(ways) if steps % 2 != 0 else all(ways)
 
 
-print("20)", [r for r in range(1, 55) if not f(8, r, 1) and f(8, r, 3)])
+a = [r for r in range(1, 55) if not f(8, r, 1) and f(8, r, 3)]
+print("20)", a[0], a[-1])
+
 print("21)", min([r for r in range(1, 55) if not f(8, r, 2) and f(8, r, 4)]))
 
 
