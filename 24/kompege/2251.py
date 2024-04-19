@@ -1,15 +1,12 @@
 s = open('24_2251.txt').read()
 
-temp_s = ''
-res = []
+l = m = c = 0
 
 for r in range(len(s)):
-    if temp_s.count('D') <= 2:
-        temp_s += s[r]
-    else:
-
-        res.append(len(temp_s))
-        temp_s = s[r]
-print(max(res))
-
-#todo
+    if s[r] == 'D': c += 1
+    while c > 2:
+        # главное не обосраться, и не поставить s[r]
+        if s[l] == 'D': c -= 1
+        l += 1
+    m = max(m, r - l + 1)
+print(m)
