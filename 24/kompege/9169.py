@@ -16,4 +16,3 @@ for r in range(2, len(s)):
         l += 1
 print(m)
 
-# todo
