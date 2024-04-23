@@ -22,8 +22,8 @@ def cc(word, data: dict, base):
     # word = word[::-1]
     # res = 0
     # for idx in range(len(word)):
-    #     a = data[word[idx]]
-    #     b = len(data)
+    #     a = n_by_row[word[idx]]
+    #     b = len(n_by_row)
     #     c = idx
     #     r = a*b**c
     #     res += r
