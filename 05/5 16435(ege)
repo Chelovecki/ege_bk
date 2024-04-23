@@ -1,0 +1,8 @@
+for n in range(1,10000):
+    q=bin(n)[2:][:-1]
+    if n%2==0:
+        q+=str('01')
+    else:
+        q+=str('10')  
+    if int(q,2)==2017:
+        print (n)  
