@@ -1,0 +1,9 @@
+for n in range(100, 1000):
+    q, w, e = map(int, str(n))
+    a = q+w
+    s = w+e
+    num=sorted([a, s])
+    res= str(num[0])+ str(num[1])
+    if res=='714':
+        print(n)
+        break
