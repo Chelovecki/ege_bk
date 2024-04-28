@@ -1,6 +1,6 @@
 numbers = [int(r) for r in open('47014.txt')]
 sr_arfm = [r for r in numbers if r % 2 != 0]
-sr_arfm = sum(sr_arfm) / len(sr_arfm)
+sr_arfm = sum(sr_arfm) // len(sr_arfm)
 
 c = m = 0
 for idx in range(1, len(numbers)):
