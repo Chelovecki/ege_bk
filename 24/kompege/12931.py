@@ -10,8 +10,6 @@
 Для выполнения этого задания следует написать программу.
 """
 
-s = open('12931 base.txt').read()
-res = []
-for idx in range(len(s)):
-
-#todo
+s = open('24_12931.txt').read()
+print('XYZ' + 'VWXYZ' * 7 + 'VW' in s)
+print(len('XYZ' + 'VWXYZ' * 7 + 'VW'))
