@@ -1,17 +1,14 @@
-"""
-№ 14647 Открытый курс "Слово пацана" (Уровень: Базовый)
+s = open('24_14647.txt').read()
 
-(М. Попков) Текстовый файл содержит только заглавные буквы латинского алфавита (ABC…Z). Определите максимальное количество идущих подряд символов, среди которых ровно по одному разу встречаются буквы X и Y.
-"""
-s = open('14647 base.txt').read()
+l = c_x = c_y = m = 0
 
-indexes = [idx for idx in range(len(s)) if s[idx] in 'XY']
-
-res = []
-for r in range(len(indexes) - 3):
-    start = indexes[r + 1]
-    end = indexes[r + 3]
-    a = s[start:end]
-    res.append(len(a))
-
-print(max(res))
+for r in range(len(s)):
+    if s[r] == 'X': c_x += 1
+    if s[r] == 'Y': c_y += 1
+    while c_y > 1 or c_x > 1:
+        if s[l] == 'X': c_x -= 1
+        if s[l] == 'Y': c_y -= 1
+        l += 1
+    if c_x == 1 and c_y == 1:
+        m = max(m, r - l + 1)
+print(m)
