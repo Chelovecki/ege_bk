@@ -2,7 +2,7 @@ from math import gcd
 
 
 def f2(n, m, k):
-    return gcd(n, k) == gcd(m, k)
+    return gcd(n, m) == k
 
 
 c = 0
