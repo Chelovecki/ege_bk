@@ -1,10 +1,11 @@
-def f(a,x):
-    p = list(range(2,20+1,2))
-    q = list(range(3,30+1,3))
-    return ((x in a) <= (x in p)) and ((x not in q) <= (x not in a))
+a = 1
+for x in range(-10_000, 10_000):
+    p = x in list(range(2, 20 + 1, 2))
+    q = x in list(range(3, 30 + 1, 3))
+    f = ((a) <= (p)) and ((not q) <= (not a))
+    if f:
+        print(x)
 
-
-for a in range(100_000):
-    a = list(range(a))
-    if all(f(a,x) for x in range(-10_000, 10_000)):
-        print(len(a),a)
+# при всегда положительном значении (x in a)
+# мы получаем те числа икс,
+# при которых все значения удовлетворяются
