@@ -1,0 +1,1 @@
+Эти 5 заданий находятся [здесь](https://education.yandex.ru/ege/collections/70ca0cc4-d5a4-4a79-91ec-42d036c2f493/task/1). Главная страница, с которой идет поиск - [тут](https://education.yandex.ru/ege/prepared-collections)
