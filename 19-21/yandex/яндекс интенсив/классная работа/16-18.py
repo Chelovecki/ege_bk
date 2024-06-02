@@ -12,6 +12,6 @@ def f(s, m):
 print('19)', [r for r in range(1, 41) if f(r, 4) and not f(r, 2)])
 print('20)', [r for r in range(1, 41) if not f(r, 2) and not f(r, 4) and f(r, 6)])
 print('21)', [r for r in range(1, 41) if not f(r, 1) and f(r, 3)])
-
+print([r for r in range(1, 41) if f(r, 2)])
 # ну а дальше "руками, брат" находим, что это значение - 19,
 # так как из него можно попасть в 20 и 38, и откуда можно попасть в 41+
