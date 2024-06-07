@@ -1,0 +1,5 @@
+- Главная страница [тут](https://education.yandex.ru/ege/go/webinars/mail#schedule)
+- Вебчик [тут](https://www.youtube.com/watch?v=T7Ocu_bRFVU&feature=youtu.be)
+- Классная работа [тут](https://education.yandex.ru/ege/collections/dbbcd921-9ffc-4f29-9971-70e533147b28/task/1)
+- Домашняя работа [тут](https://education.yandex.ru/ege/collections/1243e096-f6ad-440a-8899-fcc07d55c6e5/task/1)
+- 
